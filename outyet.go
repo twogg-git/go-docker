@@ -30,7 +30,7 @@ import (
 var (
 	httpAddr   = flag.String("http", ":8080", "Listen address")
 	pollPeriod = flag.Duration("poll", 5*time.Second, "Poll period")
-	version    = flag.String("version", "1.8.1", "Go version")
+	version    = flag.String("version", "1.9", "Go version")
 )
 
 const baseChangeURL = "https://go.googlesource.com/go/+/"
@@ -125,7 +125,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // tmpl is the HTML template that drives the user interface.
 var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body><center>
-	<h2>Testing GitHub edition tools!. Is Go {{.Version}} out yet?</h2>
+	<h2>Is Go {{.Version}} out yet?</h2>
 	<h1>
 	{{if .Yes}}
 		<a href="{{.URL}}">YES!</a>
