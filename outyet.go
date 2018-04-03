@@ -125,13 +125,9 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // tmpl is the HTML template that drives the user interface.
 var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body><center>
-	<h1 style="color:blue;> Test time!</h1>
-	<h2>Rolling from:?</h2>
-	<script type="text/javascript">
-	    var ipHost = location.host;
-	</script>
-	<h2 id="ipHost" style="color:blue;"> </h2>
-
+	<h1 style="color:blue;> Updating versions?</h1>
+	<h2>This is 1.0-k8s rolling!</h2>
+	
 	<h2>Is Go {{.Version}} out yet?</h2>
 	<h1>
 	{{if .Yes}}
