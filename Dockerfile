@@ -10,6 +10,8 @@ ADD /outyet.go /go/src/outyet/
 # either manually or with a tool like "godep".)
 RUN go install outyet
 
+TAG twogg/outyet:1.0
+
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/outyet
 
