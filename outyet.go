@@ -125,7 +125,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // tmpl is the HTML template that drives the user interface.
 var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body><center>
-	<h1> Test time!</h1>
+	<h1 style="color:blue;> Test time!</h1>
 	<script type="text/javascript">
 	    var ip = location.host;
 	</script>
